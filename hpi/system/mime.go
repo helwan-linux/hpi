@@ -1,0 +1,15 @@
+package system
+
+const PackageMIMEType = "application/x-arch-package"
+
+func PackageMIMEXML() string {
+	return `<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+	<mime-type type="application/x-arch-package">
+		<comment>Arch Linux Package</comment>
+		<comment xml:lang="en">Arch Linux Package</comment>
+		<glob pattern="*.pkg.tar.zst"/>
+	</mime-type>
+</mime-info>
+`
+}
