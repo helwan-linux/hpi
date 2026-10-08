@@ -1,0 +1,10 @@
+
+[Nemo Action]
+Name=Install Package (zst)
+Comment=Install Arch Linux package with Helwan Package Installer
+Exec=/usr/bin/hpi %F
+Icon-Name=hpi
+Selection=s
+Extensions=pkg.tar.zst;
+Quote=double
+Terminal=false
