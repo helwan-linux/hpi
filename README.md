@@ -127,6 +127,12 @@ HPI is under active development.
 
 The core installation workflow is functional and has been tested with real Arch Linux packages.
 
+sudo pacman -S go gtk3
+git clone https://github.com/helwan-linux/hpi.git
+cd hpi
+go build -o hpi
+./hpi
+
 ## License
 
 HPI is free and open-source software released under the **GNU General Public License v3.0 or later**.
