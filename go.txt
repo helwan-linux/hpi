@@ -1,16 +1,26 @@
-hpi/
-📁 hpi/
+https://github.com/helwan-linux/hpi
+├── 📄 PKGBUILD
+├── 📄 README.md
 ├── 📄 go.mod
+├── 📄 go.sum
 ├── 📄 go.txt
 ├── 📁 gui
 │   ├── 📄 dialogs.go
 │   ├── 📄 progress.go
 │   └── 📄 window.go
+├── 📄 hpi
+├── 📄 hpi.install
 ├── 📁 i18n
 │   ├── 📁 ar
+│   │   └── 📄 strings.json
 │   ├── 📁 en
+│   │   └── 📄 strings.json
 │   ├── 📁 es
+│   │   └── 📄 strings.json
+│   ├── 📄 i18n.go
 │   └── 📁 zh
+│       └── 📄 strings.json
+├── 📄 install.sh
 ├── 📁 installer
 │   ├── 📄 command.go
 │   ├── 📄 executable.go
@@ -26,10 +36,10 @@ hpi/
 ├── 📁 resources
 │   ├── 📄 hpi-mime.xml
 │   ├── 📄 hpi.desktop
-│   └── 📁 icons
-│       └── 📄 hpi.svg
-├── 📁 system
-│   ├── 📄 desktop.go
-│   ├── 📄 mime.go
-│   └── 📄 nemo.go
-└── 📁 tests
+│   ├── 📁 icons
+│   │   └── 📄 hpi.svg
+│   └── 📄 install_pkg.nemo_action
+└── 📁 system
+    ├── 📄 desktop.go
+    ├── 📄 mime.go
+    └── 📄 nemo.go
