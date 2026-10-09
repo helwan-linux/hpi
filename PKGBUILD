@@ -1,23 +1,20 @@
 
 pkgname=hpi
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Helwan Package Installer for Arch Linux packages"
 arch=('x86_64')
 url="https://github.com/helwan-linux/hpi"
 license=('GPL-3.0-or-later')
 depends=('gtk3' 'polkit' 'pacman')
 makedepends=('go')
+install=hpi.install
 
-source=(
-    "git+https://github.com/helwan-linux/hpi.git"
-)
-
+source=("git+https://github.com/helwan-linux/hpi.git")
 sha256sums=('SKIP')
 
 build() {
     cd "$srcdir/hpi"
-
     go build -o hpi
 }
 
@@ -37,6 +34,5 @@ package() {
         "$pkgdir/usr/share/icons/hicolor/scalable/apps/hpi.svg"
 
     install -Dm644 resources/install_pkg.nemo_action \
-        "$pkgdir/usr/share/nemo/actions/install_pkg.nemo_action"
+        "$pkgdir/usr/share/hpi/install_pkg.nemo_action"
 }
-
