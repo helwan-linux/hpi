@@ -127,17 +127,72 @@ HPI is under active development.
 
 The core installation workflow is functional and has been tested with real Arch Linux packages.
 
-## Build from Source
+## Requirements
 
-**Requirements:** Go and GTK3.
+* Go
+* GTK3
+* Arch Linux or an Arch Linux-based distribution
+
+Install the build dependencies:
 
 ```bash
 sudo pacman -S go gtk3
+```
+
+## Build from Source
+
+Clone the repository and build HPI:
+
+```bash
 git clone https://github.com/helwan-linux/hpi.git
 cd hpi
 go build -o hpi
+```
+
+## Run
+
+Launch HPI from the project directory:
+
+```bash
 ./hpi
 ```
+
+## Development Checks
+
+Run the following commands from the project directory.
+
+**Build all Go packages:**
+
+```bash
+go build ./...
+```
+
+**Run tests:**
+
+```bash
+go test ./...
+```
+
+**Check for common Go issues:**
+
+```bash
+go vet ./...
+```
+
+**Format Go source files:**
+
+```bash
+gofmt -w .
+```
+
+Formatting modifies source files. Review the changes before committing them.
+
+## Desktop Integration
+
+HPI uses GTK3 for its graphical interface. The included context-menu integration is designed for Nemo, the file manager used by Cinnamon.
+
+Other desktop environments and file managers may require separate context-menu integration.
+
 
 **Note:** The Nemo context-menu integration is intended for Cinnamon desktops using Nemo.
 
