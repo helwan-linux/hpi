@@ -127,11 +127,20 @@ HPI is under active development.
 
 The core installation workflow is functional and has been tested with real Arch Linux packages.
 
+## Build from Source
+
+**Requirements:** Go and GTK3.
+
+```bash
 sudo pacman -S go gtk3
 git clone https://github.com/helwan-linux/hpi.git
 cd hpi
 go build -o hpi
 ./hpi
+```
+
+**Note:** The Nemo context-menu integration is intended for Cinnamon desktops using Nemo.
+
 
 ## License
 
